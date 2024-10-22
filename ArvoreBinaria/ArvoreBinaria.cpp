@@ -71,7 +71,7 @@ void menu()
 void inicializar()
 {
 
-	// provisÛrio porque n„o libera a memoria usada pela arvore
+	// provis√≥rio porque n√£o libera a memoria usada pela arvore
 	NO* raiz = NULL;
 	
 	cout << "Arvore inicializada \n";
@@ -152,5 +152,12 @@ int elementosArvore(NO* no)
 
 void exibirElementosArvore(NO* no)
 {
-	
+	if (no == NULL)
+	{
+		return;
+	}
+
+	cout << no->valor <<" ";
+	exibirElementosArvore(no->dir);
+	exibirElementosArvore(no->esq);
 }
